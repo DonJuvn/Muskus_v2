@@ -67,31 +67,18 @@
 		</DIV>
 
 		<DIV class="row mt-5">
-			<DIV class="col-sm-3">
-				<IMG width="260px" src="img/aromat2.png" alt="">
-				<H5 class="mai1" >Maison Francis Kurkdjian Baccarat Rouge 540</H5>
-				<P class="mai2 mb-4" >Uni Parfume</P>
-				<P class="mai3" >1ml = 500kzt</P>
-			</DIV>
-			<DIV class="col-sm-3">
-				<IMG width="260px" src="img/aromat2.png" alt="">
-				<H5 class="mai1" >Maison Francis Kurkdjian Baccarat Rouge 540</H5>
-				<P class="mai2 mb-4" >Uni Parfume</P>
-				<P class="mai3" >1ml = 500kzt</P>
-			</DIV>
-			<DIV class="col-sm-3">
-				<IMG width="260px" src="img/aromat2.png" alt="">
-				<H5 class="mai1" >Maison Francis Kurkdjian Baccarat Rouge 540</H5>
-				<P class="mai2 mb-4" >Uni Parfume</P>
-				<P class="mai3" >1ml = 500kzt</P>
-			</DIV>
-			<DIV class="col-sm-3">
-				<IMG width="260px" src="img/aromat2.png" alt="">
-				<H5 class="mai1" >Maison Francis Kurkdjian Baccarat Rouge 540</H5>
-				<P class="mai2 mb-4" >Uni Parfume</P>
-				<P class="mai3" >1ml = 500kzt</P>
-			</DIV>
+				{% for pro in c %}
+				<DIV class="col-sm-3">
+				{% if pro.photo %}
+					<img width="260px" src="{{ pro.photo.url }}" alt="fbi">
+				{% endif %}
+					<H5 class="mai1" >{{ pro.title }}</H5>
+					<P class="mai2" >Uni Parfume</P>
+					<P class="mai3" >1ml = {{ pro.price }}kzt</P>
+				</DIV>
+				{% endfor %}
 		</DIV>
+
 	</DIV>
 </SECTION>
 
@@ -118,7 +105,7 @@
 			</DIV>
 		</DIV>
 		 <div class="w-100 d-none d-md-block"></div> 
-		 <IMG class="big" src="img/big.png" alt="">
+		 <IMG class="big" src="{% static 'app/img/big.png' %}" alt="">
 	</DIV>
 </SECTION>
 </BODY>
