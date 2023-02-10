@@ -2,12 +2,23 @@
 	background-color: red;
 }*/
 
+.logo{
+	margin:auto;
+}
+.ul1{
+	margin: auto;
+}
+
+
+
 #navid{
 	background-color:#343434;
+	display: flex;
+	justify-content: space-around;
 }
 .nav-link{
 	color: #FDFDFD;
-	margin-left: 30px; 
+	/* margin-left: 30px;  */
 }
 #uld{
 	margin-left: 150px;
@@ -20,27 +31,36 @@
 	margin-top: 90px;
 	margin-bottom: 100px;
 }
+
+.carousel-inner{
+	height: 85%;
+}
+
 .about1{
-	margin-left: 130px;
+	margin-left: 25%;
 	
 }
 
 .dom1{
-	margin-left: 430px;
+	margin-left: 60%;
 	text-align: left;
 	font-weight: 400;
 	font-size: 14px;
 
-	width: 502px;
+	max-width: 502px;
 	height: 270px;
 	/*left: 744px;
 	top: 300px;*/
 
 }
 .about2{
-	width: 309px;
+	margin: auto;
+	vertical-align: baseline;
+	/* top: 50%; */
+
+	/* width: 309px;
 	text-align: center;
-	margin-left: 230px;
+	margin-left: 230px; */
 	font-family: 'Inter';
 	font-style: normal;
 	font-weight: 700;
@@ -77,14 +97,16 @@
 
 
 .skidka{
-	background-color: #A91C1C;
-	width: 263px;
+	background-color: #f7c444a1;
+	/* width: 320px; */
+	min-width: 100%;
+	max-width: 360px;
 	height: 80px;
 	margin-top: 0px;
 	color: #FDFDFD;
 	font-family: 'Inter';
 	font-style: normal;
-	border: solid 1px #A91C1C;
+	border: none;
 	font-weight: 700;
 	font-size: 36px;
 	margin-bottom: 50px;
@@ -258,7 +280,11 @@ a{
 }
 #pois{
 	border-radius: 0;
-	
+	width: 70vw;
+}
+
+.row{
+	width: 70vw;
 }
 
 /*detail.html*/
@@ -325,3 +351,6 @@ a{
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
+/* .section4 .container .row .col-sm-4{
+	margin: auto;
+} */
