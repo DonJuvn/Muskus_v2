@@ -16,75 +16,84 @@
 
 
 	<SECTION class="section0">
-		<div class="container">
+<!--		<div class="container">-->
 			<nav class="navbar navbar-expand-lg navbar-light ">
-				<a class="navbar-brand" href="#"><img src="{% static 'app/img/logo.png' %}" alt=""></a>
+				<div class="logo-div">
+					<a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'app/img/logo.png' %}" alt=""></a>
+				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span class="navbar-toggler-icon"></span>
 				</button>
 			  
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				  <ul class="navbar-nav mr-auto">
+				  <div class="fa">
+					  <ul class="navbar-nav mr-auto">
 					<li class="nav-item">
 						<a style="color: white;" class="nav-link " aria-current="page" href="#section1">О нас</a>
-					  </li> 
+					  </li>
 					  <li class="nav-item">
 						<a style="color: white;" class="nav-link " aria-current="page" href="#section2">Скидки</a>
-					  </li>  
+					  </li>
 					  <li class="nav-item">
 						<a style="color: white;" class="nav-link" aria-current="page" href="#section3">Ароматы</a>
-					  </li>  
+					  </li>
 					  <li class="nav-item">
 						<a style="color: white;" class="nav-link" aria-current="page" href="#section4">Контакты</a>
 					  </li>
-					
+
 				  </ul>
-				  <a class="navbar-brand" href="https://www.instagram.com/muskus.taraz/">
+				  </div>
+				  <div class="con">
+					  <a class="navbar-brand" href="https://www.instagram.com/muskus.taraz/">
 					<img src="{% static 'app/img/insta.png' %}" alt="" width="20" height="20">
 				  </a>
 				  <a class="navbar-brand" href="https://wa.me/7472019595">
 					<img src="{% static 'app/img/what.png' %}" alt="" width="20" height="20">
 				  </a>
+				  </div>
 				</div>
 			  </nav>
-		</div>
+<!--		</div>-->
 	</SECTION>
 
 <SECTION class="section1">
 	<DIV class="container">
 		<nav class="navbar navbar-light">
-		  <form class="form-inline">
+		  <form action="{% url 'search' %}" method="get" class="form-inline">
+			  {% csrf_token %}
 		    <input id="pois" class="form-control mr-sm-2" type="search" placeholder="Искать.." aria-label="Search">
 		    <button class="btn" type="submit"><IMG src="{% static 'app/img/poisk.png' %}" alt=""></button>
 		  </form>
 		</nav>
 
 		<DIV class="row">
-			<DIV style="min-width:405px; width:23vw;" class="col-4">
+			<DIV style="min-width:340px; width:32%;" class="col-4">
 				<A href="{% url 'men' %}"><DIV class="text2">МУЖСКОЙ</DIV></A>
 			</DIV>
-			<DIV style="min-width:405px; width:23vw;" class="col-4">
+			<DIV style="min-width:340px; width:32%;" class="col-4">
 				<A href="{% url 'women' %}"><DIV class="text2">ЖЕНСКИЙ</DIV></A>
 			</DIV>
-			<DIV style="min-width:405px; width:23vw;" class="col-4">
+			<DIV style="min-width:340px; width:32%;" class="col-4">
 				<A href="{% url 'uni' %}"><DIV class="text2">UNI</DIV></A>
 			</DIV>
 		</DIV>
 
 		
 		
-			<DIV class="row mt-5">
+
+		<DIV class="row mt-5">
 				{% for ab in a %}
 				<DIV class="col-sm-4">
 				{% if ab.photo %}
-					<img width="380px" src="{{ ab.photo.url }}" alt="fbi">
+					<img width="360px" src="{{ ab.photo.url }}" alt="fbi">
 				{% endif %}
 					<H5 class="mai1" >{{ ab.title }}</H5>
 					<P class="mai2" >Men's Parfume</P>
 					<P class="mai3" >1ml = {{ ab.price }}kzt</P>
 				</DIV>
 				{% endfor %}
-			</DIV>	
+		</DIV>
+
 		
 		
 	</DIV>

@@ -1,6 +1,9 @@
 from django.db import models
 
 # Create your models here.
+from django.urls import reverse
+
+
 class Product(models.Model):
     title = models.CharField(max_length=150, verbose_name='Наименование')
     description = models.TextField(blank=True, verbose_name='Контент')

@@ -9,11 +9,21 @@
 	margin: auto;
 }
 
+.fa{
+    padding-left:30%;
+}
 
+.con{
+    padding-left:30%;
+}
+
+.logo-div{
+    margin-left: 6%;
+}
 
 #navid{
 	background-color:#343434;
-	display: flex;
+
 	justify-content: space-around;
 }
 .nav-link{
@@ -25,6 +35,8 @@
 }
 .section0{
 	background-color:#343434;
+    min-width: 100%;
+
 }
 
 .section1{
@@ -280,12 +292,16 @@ a{
 }
 #pois{
 	border-radius: 0;
-	width: 70vw;
+	width: 77.5vw;
 }
 
-.row{
-	width: 70vw;
+.search{
+    min-width: 380px;
+    width:70vw;
+    display: flex;
+    flex-direction: row;
 }
+
 
 /*detail.html*/
 .we{
